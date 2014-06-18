@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>Demo stranica</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery-ui-1.8.20.custom.css">
+
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/theme/default/style.css">
+
+  <script type="text/javascript" src="javascript/OpenLayers.js"></script>
+  <script type="text/javascript" src="javascript/proj4js-compressed.js"></script>
+
+  <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+ 
+
+  <script type="text/javascript" src="javascript/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="javascript/jquery-ui-1.8.19.custom.min.js"></script>
+  
+  <script type="text/javascript" src="javascript/demo_script.js"></script>
+  <script type="text/javascript" src="javascript/demo_script_2.js"></script>
+
+
+</head>
+<body>
+
+<div id="container"> 
+<div id="map">
+</div>
+
+<div id="tools" class="tools_button">
+  <div class="demo" id="format_2">
+  <button id="zoomin" onclick="priblizi()">Zoom In</button>
+  <button id="zoomout" onclick="udalji()">Zoom Out</button>
+  <button id="maxextent" onclick="zoomMax()">Zoom Max</button>
+  <input type="checkbox" id="zoomBox" name="radio" onclick="zoomBox()" /><label for="zoomBox">Window</label>
+  <button id="opener">Legenda</button>
+  </div>
+  <br></br>
+  <br></br>
+</div>
+
+<!-- lijeva strana -->
+<div id="lijevi">
+
+   <div id="legend" title="LEGENDA">
+      <ul>
+
+      </ul>
+  </div>
+
+
+    <div id="izlazi">
+    </div>
+</div>
+
+<!-- desna strana -->
+<div id="desni">
+
+  <div id="logo">
+    <img src="img/top_geof.jpg" style="position:absolute;z-index:3" alt="Geodetski Fakultet" title="Geodetski fakultet" >
+    <img src="img/top_photos.jpg" style="position:absolute;top:0px;right:0px;z-index:1" alt="Geodetski Fakultet" title="Geodetski fakultet">
+    <img src="img/top_photos.jpg" style="position:absolute;top:63px;z-index:1" alt="Geodetski Fakultet" title="Geodetski fakultet">
+    
+  </div>
+
+
+  <div id="layers" class="layers_button">
+    <p>autori: Ivan Kolar, Mauricio Vidulin, Marko Polovina, Katarina &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Milec</p>
+    <center></br></br><h2>SLOJEVI</h2>
+    <form name="proba">
+      <div id="radio" >
+      <input type="radio" id="radio1" name="radio" onclick="ch_layer(osm)" checked="checked" /><label for="radio1">Osm</label>
+      <input type="radio" id="radio2" name="radio" onclick="ch_layer(gphy)" /><label for="radio2">Google</label>
+      <input type="radio" id="radio3" name="radio" onclick="ch_layer(hybrid)" /><label for="radio3">Bing</label>
+      </div>
+  
+      <div id="format">
+      <input type="checkbox" id="check1" onClick="prikaz_sloja(shume)" checked/><label for="check1">Šume</label>
+      <input type="checkbox" id="check2" onClick="prikaz_sloja(zupanije)" checked/><label for="check2">Županije</label>
+      </div>
+    </form>
+    </center>
+</div>
+
+  <div id="referentna">
+  </div>
+
+  <div id="koordinate" class="tabbable">
+    <center><h2>KOORDINATE</h2></center>
+    <div id="tabs" class="tab_button">
+        <ul>
+          <li><a href="#tabs1">HTRS96</a></li>
+          <li><a href="#tabs2">WGS</a></li>
+        </ul>
+        <div id="tabs1">
+        <p> </p> 
+        </div>
+        <div id="tabs2">
+        <p> </p>
+        </div>
+    </div>
+
+
+  </div>
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
